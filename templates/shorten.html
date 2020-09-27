@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section>
+    <form method='POST'>
+        <h1>Shorten A Url</h1>
+        <fieldset>
+            <div class="form_container">
+                <label for="url">Url: </label>
+                <input type="text" id="url" name="url" value="" placeholder="https://www.google.com" required="true">
+
+                <input type="submit" class="submit" value="Submit!">
+            </div>
+        </fieldset>
+        {% for message in get_flashed_messages() %}
+        <p class="errorText">{{message}}</p>
+        {% endfor %}
+    </form>
+</section>
+
+{% endblock content %}

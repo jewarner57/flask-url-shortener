@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section>
+    <form method='POST'>
+        <h1>Url shortened to: <a href="{{short}}">{{short}}</a></h1>
+        <p></p>
+        <h1>Destination: <a href="{{dest}}">{{dest}}</a></h1>
+        <p></p>
+    </form>
+</section>
+
+{% endblock content %}
